@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drag and Drop Train Carriages</title>
+    <style>
+          #toolbar {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #cad1ce;
+        }
+        #train .carriage:first-child {
+            background-image: url(/หัวขบวน-removebg-preview.png);
+            background-size: cover;
+        }
+         .carriage {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+             background-image: url("ลำตัวขบวน-removebg-preview.png");
+            background-size: cover;
+            color: rgb(1, 20, 105);
+            font-size: 20px; 
+             font-style: italic;
+        }
+        .carriage:hover {
+            background-size: cover;
+            height: 80px;
+            width: 80px;
+        }
+        .carriage:last-child {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+           
+             background-image: url(/ท้ายขบวน-removebg-preview.png);
+            cursor: move;
+            border-radius: 5px; /* เพิ่มมุมโค้ง */
+            box-shadow: 2px 2px 5px #888; /* เพิ่มเงา */
+        }
+        #train {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #000;
+            min-height: 100px;
+            white-space: nowrap;
+            overflow-x: auto;
+            background-color: #b45151; /* เปลี่ยนสีพื้นหลัง */
+            border-radius: 10px; /* เพิ่มมุมโค้ง */
+            box-shadow: 3px 3px 8px #888; /* เพิ่มเงา */
+        }
+        
+        button {
+            background-color: aqua;
+             font-size: 35px;
+             border-radius: 22px;
+        }
+         button:hover {
+            background-color: rgb(1, 103, 161);
+        }
+    </style>
+</head>
+<body>
+
+<div id="toolbar">
+    <button onclick="addCarriage()">เพิ่มโบกี้</button>
+</div>
+<div id="train">
+    <!-- โบกี้รถไฟจะถูกเพิ่มที่นี่ -->
+</div>
+
+<div id="train">
+    <div class="carriage" onclick="showCarriageStatus(this)">โบกี้ 1</div>
+    <div class="carriage" onclick="showCarriageStatus(this)">โบกี้ 2</div>
+    <div class="carriage" onclick="showCarriageStatus(this)">โบกี้ 3</div>
+    <!-- โบกี้รถไฟจะถูกเพิ่มที่นี่ -->
+</div>
+
+
+
+<script src="dragdrop.js"></script>
+</body>
+</html>
